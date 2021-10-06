@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "288533759180",
+    "project_id": "todo-app-bbfef",
+    "storage_bucket": "todo-app-bbfef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288533759180:android:bf68cb5217e4a6508a2e69",
+        "android_client_info": {
+          "package_name": "uz.task.to_do_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "288533759180-hu3bq7pdiaeb58996ch07r1h1o3hd1oa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSkOTfK7isEE2Q-JeS4zoQ-xAutOGx01o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "288533759180-hu3bq7pdiaeb58996ch07r1h1o3hd1oa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

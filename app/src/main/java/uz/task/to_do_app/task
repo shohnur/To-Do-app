@@ -1,0 +1,14 @@
+Funksiyalari:
+ * malumotlarni ko'rsatuvchi ekran
+ * malumotlarni qo'shish mumkin
+ * malumotlarni o'chirish mumkin
+ * malumotlarni edit qilish mumkin
+ * class o'z ichiga quyidagi parametrlarni olishi kerak:
+     - name
+     - date
+     - priority ( priority ga qarab malumotlarni ketma-ketligini sort qilasiz )
+
+Texnologiyalar:
+* ma'lumotlar ham local storage da ham firebase da saqlanib boradi.
+* adapter uchun RecyclerView.Adapter ni emas, ListAdapterni ishlatasiz
+* localstorage uchun room ishlatasiz
