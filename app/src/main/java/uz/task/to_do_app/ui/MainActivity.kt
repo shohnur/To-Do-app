@@ -5,13 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.viewmodel.ext.android.viewModel
 import uz.task.to_do_app.R
-import uz.task.to_do_app.ui.adapter.DataListAdapter
+import uz.task.to_do_app.ui.adapter.DataItemDiffCallback
+import uz.task.to_do_app.ui.adapter.MyListAdapter
 import uz.task.to_do_app.ui.dialog.AddEditDialog
 
 class MainActivity : AppCompatActivity() {
 
     private val viewModel by viewModel<AppViewModel>()
-    private lateinit var adapter: DataListAdapter
+    private lateinit var adapter: MyListAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         viewModel.loadData()
         viewModel.data.observe(
             this, {
-                adapter.setData(it)
+                adapter.submitList(it.sortedBy { it.priority })
             }
         )
 
@@ -36,7 +37,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initList() {
-        adapter = DataListAdapter(applicationContext)
+        adapter = MyListAdapter(DataItemDiffCallback())
         listView.adapter = adapter
 
         adapter.apply {
